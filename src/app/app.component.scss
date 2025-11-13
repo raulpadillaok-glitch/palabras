@@ -1,0 +1,28 @@
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  /* --- CAMBIO AQUÍ --- */
+  /* Gradiente oscuro: De un gris carbón a un azul noche profundo */
+  background: linear-gradient(135deg, #222 0%, #1d2b3f 100%);
+  
+  /* Agregado: Un color de texto claro por defecto para el contenedor */
+  color: #e0e0e0; 
+  
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.titulo-principal {
+  text-align: center;
+  color: white; /* El blanco ya funciona perfecto con el fondo oscuro */
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  
+  /* --- CAMBIO AQUÍ --- */
+  /* Una sombra más sutil y clara para que "brille" sobre el fondo oscuro */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+}

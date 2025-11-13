@@ -1,0 +1,17 @@
+<div class="app-container">
+  <h1 class="titulo-principal">
+    Mi Lista de Palabras
+  </h1>
+  <app-agregar-palabra
+    [palabraParaEditar]="palabraParaEditar"
+    (palabraAgregada)="agregarPalabraALista($event)"
+    (palabraActualizada)="actualizarPalabraEnLista($event)"
+    (edicionCancelada)="palabraParaEditar = null">
+  </app-agregar-palabra>
+
+  <app-lista-palabras
+    [palabras]="listaPalabras"
+    (palabraEliminada)="eliminarPalabraDeLista($event)"
+    (palabraAEditar)="prepararEdicion($event)">
+  </app-lista-palabras>
+</div>

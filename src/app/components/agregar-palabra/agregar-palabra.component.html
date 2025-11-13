@@ -1,0 +1,26 @@
+<div class="agregar-container">
+    <h2>{{modoEdicion ? 'Editar Palabra' : 'Agregar Nueva Palabra'}}</h2>
+    <div class="form-container">
+        <input 
+            type="text"
+            [(ngModel)]="nuevaPalabra"
+            placeholder="Escribir una Palabra"
+            (keyup.enter)="agregarPalabras()"
+            class="input-palabra"
+        >
+        <div class="botones-container">
+            <button 
+                class="btn-agregar" 
+                (click)="agregarPalabras()"
+                [class.btn-actualizar]="modoEdicion">
+                {{modoEdicion ? 'Actualizar' : 'Agregar'}}
+            </button>
+            <button 
+                *ngIf="modoEdicion" 
+                class="btn-cancelar" 
+                (click)="cancelarEdicion()">
+                Cancelar
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,130 @@
+/* --- Contenedor Principal (Oscuro) --- */
+.lista-container {
+  /* Fondo oscuro */
+  background: #2b2d3e;
+  border-radius: 12px;
+  padding: 25px;
+  /* Sombra más sutil para fondos oscuros */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lista-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.lista-container h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  /* Texto claro */
+  color: #fafafa;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* --- Estado Vacío (Oscuro) --- */
+.lista-vacia {
+  text-align: center;
+  padding: 40px 20px;
+  /* Color de texto más sutil */
+  color: #888;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+/* --- Lista y Items (Oscuro) --- */
+.lista-palabras {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.palabra-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  margin-bottom: 10px;
+  /* Fondo de item (un poco más claro que el contenedor) */
+  background: #393c50;
+  border-radius: 8px;
+  /* El borde verde resalta perfecto */
+  border-left: 4px solid #66ea66;
+  transition: all 0.3s ease;
+}
+
+.palabra-item:hover {
+  /* Un poco más claro al pasar el mouse */
+  background: #4a4d60;
+  transform: translateX(5px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.palabra-item:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Partes del Item (Oscuro) --- */
+.numero {
+  font-weight: 600;
+  /* El color cian resalta perfecto */
+  color: #66dbea;
+  min-width: 30px;
+  font-size: 1.1rem;
+}
+
+.palabra-texto {
+  flex: 1;
+  font-size: 1.1rem;
+  /* Texto claro para el item */
+  color: #e0e0e0;
+  word-break: break-word;
+}
+
+.acciones {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* --- Botones (Sin cambios, ya resaltan) --- */
+.btn-editar,
+.btn-eliminar {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  color: white; /* Aseguramos texto blanco */
+}
+
+.btn-editar:hover,
+.btn-eliminar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-editar:active,
+.btn-eliminar:active {
+  transform: translateY(0);
+}
+
+.btn-editar {
+  background: linear-gradient(135deg, #ffffff 0%, #021d1f 100%);
+}
+
+.btn-editar:hover {
+  background: linear-gradient(135deg, #9a9ea1 0%, #020f0f 100%);
+}
+
+.btn-eliminar {
+  background: linear-gradient(135deg, #eee7e9 0%, #1b1701 100%);
+}
+
+.btn-eliminar:hover {
+  background: linear-gradient(135deg, #cfb1ba 0%, #110f04 100%);
+}

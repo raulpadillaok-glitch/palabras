@@ -1,0 +1,20 @@
+<div class="lista-container">
+    <h2>Lista de Palabras</h2>
+    <div *ngIf="palabras.length === 0" class="lista-vacia">
+        No hay palabras en la lista.
+    </div>
+    <ul *ngIf="palabras.length > 0" class="lista-palabras">
+        <li *ngFor="let palabra of palabras; let i = index" class="palabra-item">
+            <span class="numero">{{i+1}}.</span>
+            <span class="palabra-texto">{{palabra}}</span>
+            <div class="acciones">
+                <button class="btn-editar" (click)="editarPalabra(i, palabra)">
+                    Editar
+                </button>
+                <button class="btn-eliminar" (click)="eliminarPalabra(i)">
+                    Eliminar
+                </button>
+            </div>
+        </li>
+    </ul>
+</div>
